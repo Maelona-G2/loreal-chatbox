@@ -1,0 +1,196 @@
+/* —— basic reset —— */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* —— body + fonts —— */
+body {
+  font-family: "Montserrat", Arial, Helvetica, sans-serif;
+  color: #333;
+  display: flex;
+  justify-content: center;
+  background-color: #000000;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.page-wrapper {
+  width: 90%;
+  max-width: 900px;
+}
+
+/* header */
+.site-header {
+  text-align: center;
+  padding-top: 50px;
+}
+
+.site-title {
+  font-size: 22px;
+  font-weight: 500;
+  margin-bottom: 10px;
+  color: #ffffff; /* site title color */
+}
+
+/* logo (invert image so it appears white) */
+.logo img {
+  filter: brightness(0) invert(1);
+}
+
+/* chat window */
+.chatbox {
+  margin: 40px 0;
+}
+
+.chat-window {
+  height: 360px;
+  border: 1px solid #e3a535;
+  padding: 20px;
+  font-size: 18px;
+  line-height: 1.5;
+  overflow-y: auto;
+  background: #fafafa;
+  white-space: pre-line;
+
+  /* conversation layout */
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  align-items: flex-start;
+}
+
+/* message bubbles */
+.msg {
+  max-width: 78%;
+  padding: 10px 14px;
+  border-radius: 12px;
+  box-shadow: 0 1px 2px rgba(0, 0, 0, 0.06);
+  word-wrap: break-word;
+}
+
+.msg.user {
+  background: #ff003b;
+  color: #ffffff;
+  align-self: flex-end;
+  border-bottom-right-radius: 6px;
+  border-bottom-left-radius: 12px;
+}
+
+.msg.ai {
+  background: #ffffff;
+  color: #333333;
+  align-self: flex-start;
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 12px;
+}
+
+/* small name label on user messages */
+.msg-name {
+  font-size: 12px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  opacity: 0.9;
+}
+
+/* latest question block (displayed just above assistant reply) */
+.latest-question {
+  font-size: 13px;
+  font-style: italic;
+  color: #666;
+  align-self: stretch;
+  background: transparent;
+  padding: 4px 6px;
+  margin-top: 4px;
+  margin-bottom: -4px;
+}
+
+/* thinking indicator style (lighter) */
+.msg.thinking {
+  opacity: 0.8;
+  font-style: italic;
+}
+
+/* input row */
+.chat-form {
+  display: flex;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.chat-form input {
+  flex: 1;
+  padding: 12px;
+  border: 1px solid #ccc;
+  font-size: 18px;
+}
+
+.chat-form input:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+.chat-form button {
+  font-size: 18px;
+  background: #ff003b;
+  color: #fff;
+  border: none;
+  padding: 12px;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.chat-form button .material-icons {
+  font-size: 24px;
+}
+
+.chat-form button:hover {
+  background: #e60032;
+}
+
+.chat-form button:focus {
+  outline: 2px solid #000;
+  outline-offset: 2px;
+}
+
+/* visually hidden */
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+/* footer */
+.site-footer {
+  margin: 60px 0 40px;
+  text-align: center;
+  font-size: 14px;
+  color: #ffffff; /* footer text color */
+}
+
+.site-footer nav {
+  margin-top: 12px;
+}
+
+.site-footer a {
+  margin: 0 8px;
+  color: #ffffff;
+  text-decoration: none;
+}
+
+.site-footer a:hover {
+  color: #cccccc;
+}
